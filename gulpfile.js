@@ -27,7 +27,7 @@ gulp.task('concatJS', function() {
     .pipe(gulp.dest('public/js'));
 });
 
-gulp.task('default', gulp.series(['html', 'sass', 'concatJS']));
+gulp.task('build', gulp.series(['html', 'sass', 'concatJS']));
 
 gulp.task('watch', function() {
   gulp.watch('src/*.html', gulp.series('html'));
