@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
@@ -8,8 +9,16 @@ gulp.task('html', function() {
     .pipe(gulp.dest('public'));
 });
 
+gulp.task('babel', function() {
+  return gulp.src('src/js/*.js')
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(gulp.dest('public/js'));
+});
+
 gulp.task('minify', function() {
-  gulp.src('src/js/*.js')
+  gulp.src('public/js/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('public/js'));
 });
@@ -21,13 +30,13 @@ gulp.task('sass', function() {
 });
 
 gulp.task('concatJS', function() {
-  return gulp.src('src/js/*.js')
+  return gulp.src('public/js/*.js')
     .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(gulp.dest('public/js'));
 });
 
-gulp.task('build', gulp.series(['html', 'sass', 'concatJS']));
+gulp.task('build', gulp.series(['html', 'sass', 'babel', 'concatJS']));
 
 gulp.task('watch', function() {
   gulp.watch('src/*.html', gulp.series('html'));

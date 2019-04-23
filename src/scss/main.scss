@@ -31,6 +31,10 @@ body {
   .navbar-item.is-active {
     color: $primary;
   }
+
+  span {
+    color: $white;
+  }
 }
 
 .topbar {

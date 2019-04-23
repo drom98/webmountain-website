@@ -9,10 +9,13 @@
   "author": "webmountain",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.4.3",
     "bulma": "^0.7.4"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.4.3",
     "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2"
