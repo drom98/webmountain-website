@@ -22,4 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  console.log("looolix");
+
 });
