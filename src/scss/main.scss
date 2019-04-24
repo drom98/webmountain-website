@@ -4,7 +4,7 @@ $primary: #80CC41;
 $dark: #1C1C1C;
 $white: #D0D0D0;
 $card-background-color: #f3f3f3;
-$section-padding-medium: 9rem 1.5rem;
+$section-padding-medium: 25vh 1.5rem;
 //Import Bulma
 @import './node_modules/bulma/bulma.sass';
 
@@ -22,6 +22,11 @@ body {
 }
 
 .navbar {
+
+  @media screen and (max-width: $desktop - 1px) {
+    top: 0.8rem;
+  }
+
   background-color: transparent;
 
   img {
@@ -29,17 +34,32 @@ body {
   }
   
   .navbar-item.is-active {
-    color: $primary;
+    color: $dark;
+
+    @media screen and (max-width: $desktop - 1px) {
+      background-color: $primary;
+    }
   }
 
   span {
     color: $white;
   }
+
+  .navbar-menu{
+    @media screen and (max-width: $desktop - 1px) {
+      background-color: $primary;
+    }
+
+    a.navbar-item:hover {
+      background-color: $dark;
+      color: $white;
+    }
+  }
 }
 
 .topbar {
   min-height: unset;
-  height: 1.9rem;
+  height: 1.6rem;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -54,4 +74,10 @@ body {
       padding: 0.3rem;
     }
   }
+}
+
+.scrollDown {
+  transition: ease-in-out 1s;
+  background-color: $dark;
+  top: 0 !important;
 }

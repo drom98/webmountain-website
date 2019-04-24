@@ -14,14 +14,15 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" type="image/png" href="assets/icons/favicon_512x512.png">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link rel="stylesheet" href="css/main.css">
   <title>webmountain - O seu negócio merece mais.</title>
 </head>
 
-<body class="">
+<body class="has-navbar-fixed-top">
 
   <!--Topbar-->
-  <nav class="navbar is-primary topbar">
+  <nav class="navbar is-primary topbar is-fixed-top is-hidden-touch">
     <div class="navbar-menu">
       <div class="navbar-start">
         <!--Location-->
@@ -69,7 +70,12 @@
   <!--End topbar-->
 
   <!--Navbar-->
-  <nav class="navbar is-transparent is-spaced" role="navigation" aria-label="main navigation">
+  <nav 
+  class="navbar is-transparent is-spaced is-fixed-top" 
+  id="main-navbar"
+  role="navigation" 
+  aria-label="main navigation" 
+  style="top: 1.5rem">
     <div class="navbar-brand">
       <a href="/index.html" class="navbar-item">
         <img src="assets/logo_index.svg" alt="webmountain logo">
@@ -80,7 +86,7 @@
         <span aria-hidden="true"></span>
       </a>
     </div>
-    <div class="navbar-menu">
+    <div class="navbar-menu is-paddingless" id="navbarMenu">
       <div class="navbar-end">
         <a href="#" class="navbar-item has-text-weight-bold is-active">Início</a>
         <a href="#" class="navbar-item has-text-weight-bold has-text-light">Serviços</a>
@@ -252,11 +258,11 @@
 
   <!--About us section-->
   <section class="hero" id="services">
-    <div class="hero is-primary is-medium">
+    <div class="hero is-primary is-medium ">
       <div class="hero-body">
         <div class="container">
           <h1 class="title">Sobre nós</h1>
-          <h2 class="subtitle">O nosso objetivo é construir soluções únicas, somos apaixonados pelo que fazemos.</h2>
+          <h2 class="subtitle">O nosso foco é construir soluções únicas. Somos apaixonados pelo que fazemos.</h2>
         </div>
       </div>
     </div>
@@ -311,28 +317,28 @@
           <div class="field has-text-centered">
             <label class="label">Nome</label>
             <div class="control">
-              <input type="text" class="input is-primary has-background-light">
+              <input type="text" class="input is-dark has-background-light">
             </div>
           </div>
           <!--Email-->
           <div class="field">
             <label class="label has-text-centered">Email</label>
             <div class="control">
-              <input type="email" class="input is-primary has-background-light">
+              <input type="email" class="input is-dark has-background-light">
             </div>
           </div>
           <!--Phone-->
           <div class="field">
             <label class="label has-text-centered">Telefone</label>
             <div class="control">
-              <input type="tel" class="input is-primary has-background-light">
+              <input type="tel" class="input is-dark has-background-light">
             </div>
           </div>
           <!--Message-->
           <div class="field">
             <label class="label has-text-centered">Mensagem</label>
             <div class="control">
-              <textarea name="" id="" cols="30" rows="10" class="textarea has-background-light is-primary"></textarea>
+              <textarea name="" id="" cols="30" rows="10" class="textarea has-background-light is-dark"></textarea>
             </div>
           </div>
           <!--Terms checkbox-->
@@ -358,7 +364,8 @@
   </section>
   <!--End contact section-->
 
-  <script src="js/main.js"></script>
+  <script src="../src/js/main.js"></script>
+  <!--<script src="js/main.js"></script>-->
 </body>
 
 </html>
