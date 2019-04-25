@@ -8,15 +8,33 @@ document.addEventListener('DOMContentLoaded', () => {
     navbarDataset.classList.toggle('is-active');
   });
 
+  //Navbar animation
   const mainNavEl = document.querySelector('#main-navbar');
-  window.addEventListener('scroll', () => {
-    let scrollPosition = window.pageYOffset;
-    if(scrollPosition > 170) {
-      mainNavEl.classList.add('scrollDown');
+  const navItems = document.querySelectorAll('.main-nav-items');
+
+  function test(option) {
+    for(let i = 0; i < navItems[0].childElementCount; i++) {
+      for(let j = 0; j < navItems[0].children[i].classList.length; j++) {
+        if(navItems[0].children[i].classList[j] != 'is-active') {
+          if(option) {
+            navItems[0].children[i].classList[j].add('has-text-dark');
+          }
+        } else {
+          
+        }
+      }
     }
-    else if(scrollPosition < 170) {
-      mainNavEl.classList.remove('scrollDown');
-    }
-  });
+  }
   
+  function setNavbarAnim() {
+    const screenWidth = window.innerWidth;
+    window.addEventListener('scroll', () => {
+      let scrollPosition = window.pageYOffset;
+      if(scrollPosition > 170) {
+        mainNavEl.classList.add('scrollDown');
+      } else if(scrollPosition < 170) {
+        mainNavEl.classList.remove('scrollDown');
+      }
+    });
+  }
 });

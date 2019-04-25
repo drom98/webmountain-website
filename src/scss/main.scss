@@ -1,10 +1,8 @@
-//Colors
-$turquoise: #80CC41;
-$primary: #80CC41;
-$dark: #1C1C1C;
-$white: #D0D0D0;
-$card-background-color: #f3f3f3;
-$section-padding-medium: 25vh 1.5rem;
+$section-padding-medium: 20vh 1.5rem;
+
+//Import colors
+@import '_colors';
+
 //Import Bulma
 @import './node_modules/bulma/bulma.sass';
 
@@ -12,51 +10,47 @@ $section-padding-medium: 25vh 1.5rem;
 @import url('https://fonts.googleapis.com/css?family=Lato:400,900');
 $fontLato: 'Lato';
 
-html {
-  background-color: $dark;
-}
-
 body {
   font-family: $fontLato;
   background-color: $dark;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 3.25rem;
+  }
 }
 
-.navbar {
-
-  @media screen and (max-width: $desktop - 1px) {
-    top: 0.8rem;
-  }
-
+//Main navbar styles
+#main-navbar {
   background-color: transparent;
+  transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
 
-  img {
-    max-height: 2.75rem;
-  }
-  
+  //Style is-active class
   .navbar-item.is-active {
-    color: $dark;
-
-    @media screen and (max-width: $desktop - 1px) {
-      background-color: $primary;
-    }
+    color: $primary;
   }
 
+  //Burger menu close btn
   span {
     color: $white;
   }
 
-  .navbar-menu{
-    @media screen and (max-width: $desktop - 1px) {
-      background-color: $primary;
-    }
+  @media screen and (max-width: $desktop - 1px) {
+    .navbar-menu {
+      position: absolute;
+      width: 100%;
 
-    a.navbar-item:hover {
-      background-color: $dark;
-      color: $white;
+      .is-active {
+        color: $primary !important;
+      }
+
+      a {
+        color: $dark !important;
+        }
+      }
     }
-  }
 }
 
+//Top green bar
 .topbar {
   min-height: unset;
   height: 1.6rem;
@@ -77,7 +71,12 @@ body {
 }
 
 .scrollDown {
-  transition: ease-in-out 1s;
-  background-color: $dark;
+  -webkit-box-shadow: 0px 2px 51px 0px rgba(28,28,28,0.3);
+  -moz-box-shadow: 0px 2px 51px 0px rgba(28,28,28,0.3);
+  box-shadow: 0px 2px 51px 0px rgba(28,28,28,0.3);
+
+  transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  background-color: $light !important;
+  padding: unset !important;
   top: 0 !important;
 }
