@@ -80,3 +80,7 @@ body {
   padding: unset !important;
   top: 0 !important;
 }
+
+.checkbox:hover, .radio:hover {
+  color: inherit !important;
+}
