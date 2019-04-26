@@ -1,4 +1,4 @@
-$section-padding-medium: 19vh 1.5rem;
+$section-padding-medium: 24vh 1.5rem;
 
 //Import colors
 @import '_colors';
@@ -13,16 +13,16 @@ $fontLato: 'Lato';
 body {
   font-family: $fontLato;
   background-color: $dark;
-
-  @media screen and (min-width: $desktop) {
-    padding-top: 3.25rem;
-  }
 }
 
 //Main navbar styles
 #main-navbar {
-  background-color: transparent;
-  transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  background-color: $dark;
+  height: 0rem;
+
+  .navbar-brand {
+    min-height: unset;
+  }
 
   //Style is-active class
   .navbar-item.is-active {
@@ -33,29 +33,6 @@ body {
   span {
     color: $white;
   }
-
-  @media screen and (max-width: $desktop - 1px) {
-    .navbar-menu {
-      position: absolute;
-      width: 100%;
-
-      .is-active {
-        color: $primary !important;
-      }
-
-      a {
-        color: $dark !important;
-        }
-      }
-    }
-}
-
-//Top green bar
-.topbar {
-  min-height: unset;
-  height: 1.65rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .home-section {
@@ -68,17 +45,6 @@ body {
       padding: 0.3rem;
     }
   }
-}
-
-.scrollDown {
-  -webkit-box-shadow: 0px 2px 51px 0px rgba(28,28,28,0.3);
-  -moz-box-shadow: 0px 2px 51px 0px rgba(28,28,28,0.3);
-  box-shadow: 0px 2px 51px 0px rgba(28,28,28,0.3);
-
-  transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
-  background-color: $light !important;
-  padding: unset !important;
-  top: 0 !important;
 }
 
 .checkbox:hover, .radio:hover {

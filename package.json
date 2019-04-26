@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.4.3",
-    "bulma": "^0.7.4"
+    "bulma": "^0.7.4",
+    "smooth-scroll": "^16.0.3"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.4.3",

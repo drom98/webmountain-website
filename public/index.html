@@ -19,59 +19,11 @@
   <title>webmountain - O seu negócio merece mais.</title>
 </head>
 
-<body>
-
-  <!--Topbar-->
-  <nav class="navbar is-primary topbar is-fixed-top is-hidden-touch">
-    <div class="navbar-menu">
-      <div class="navbar-start">
-        <!--Location-->
-        <div class="navbar-item">
-          <span class="icon">
-            <i class="fas fa-map-marker-alt has-text-dark"></i>
-          </span>
-          <p class="is-size-7 has-text-dark">Aveiro, Portugal</p>
-        </div>
-        <!--Phone-->
-        <div class="navbar-item">
-          <span class="icon">
-            <i class="fas fa-mobile-alt has-text-dark"></i>
-          </span>
-          <a href="tel:+351934410403" class="is-size-7 has-text-dark">+351 934410403</a>
-        </div>
-        <!--Email-->
-        <div class="navbar-item">
-          <span class="icon">
-            <i class="far fa-envelope has-text-dark"></i>
-          </span>
-          <a href="mailto:info@webmountain.pt" class="is-size-7 has-text-dark">info@webmountain.pt</a>
-        </div>
-      </div>
-      <!--Socials-->
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <span class="icon">
-            <a href="#"><i class="fab fa-facebook-square has-text-dark"></i></a>
-          </span>
-        </div>
-        <div class="navbar-item">
-          <span class="icon">
-            <a href="#"><i class="fab fa-instagram has-text-dark"></i></a>
-          </span>
-        </div>
-        <div class="navbar-item">
-          <span class="icon">
-            <a href="#"><i class="fab fa-linkedin has-text-dark"></i></a>
-          </span>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <!--End topbar-->
+<body class="has-navbar-fixed-top">
 
   <!--Navbar-->
   <nav 
-  class="navbar is-transparent is-spaced" 
+  class="navbar is-transparent is-spaced is-fixed-top" 
   id="main-navbar"
   role="navigation" 
   aria-label="main navigation">
@@ -85,12 +37,12 @@
         <span aria-hidden="true"></span>
       </a>
     </div>
-    <div class="navbar-menu is-paddingless" id="navbarMenu">
+    <div class="navbar-menu is-paddingless has-background-dark" id="navbarMenu">
       <div class="navbar-end main-nav-items">
-        <a href="#" class="navbar-item has-text-weight-bold is-active">Início</a>
-        <a href="#" class="navbar-item has-text-weight-bold has-text-light">Serviços</a>
-        <a href="#" class="navbar-item has-text-weight-bold has-text-light">Sobre nós</a>
-        <a href="#" class="navbar-item has-text-weight-bold has-text-light">Contactos</a>
+        <a data-scroll href="#top" class="navbar-item has-text-weight-bold is-active">Início</a>
+        <a data-scroll href="#services" class="navbar-item has-text-weight-bold has-text-light">Serviços</a>
+        <a data-scroll href="#about" class="navbar-item has-text-weight-bold has-text-light">Sobre nós</a>
+        <a data-scroll href="#contact" class="navbar-item has-text-weight-bold has-text-light">Contactos</a>
       </div>
     </div>
   </nav>
@@ -256,7 +208,7 @@
   End tech section-->
 
   <!--About us section-->
-  <section class="hero" id="services">
+  <section class="hero" id="about">
     <div class="hero is-primary is-medium ">
       <div class="hero-body">
         <div class="container">
@@ -385,7 +337,7 @@
             </span>
             <div class="column"></div>
             <h1 class="title">Subscreva a nossa newsletter.</h1>
-            <h3 class="subtitle">Receba mensalmente um conjunto de dicas que lhe irão muito provavelmente ser úteis.</h3>
+            <h3 class="subtitle">Receba mensalmente um conjunto de dicas que o irão ajudar.</h3>
             <div class="field has-addons">
               <div class="control">
                 <input class="input is-primary" type="text" placeholder="Introduza o seu email...">
@@ -403,6 +355,7 @@
   </section>
   <!--End contact section-->
 
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
   <script src="../src/js/main.js"></script>
   <!--<script src="js/main.js"></script>-->
 </body>
