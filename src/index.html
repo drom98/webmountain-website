@@ -12,6 +12,7 @@
   a uma boa estratégia de marketing para concretizar os seus objetivos.">
   <meta name="keywords" content="webmountain, website para empresa, agencia web aveiro, sites aveiro, alojamento sites aveiro, digital marketing, SEO">
   <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1C1C1C">
   <link rel="icon" type="image/png" href="assets/icons/favicon_512x512.png">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
@@ -38,18 +39,18 @@
       </a>
     </div>
     <div class="navbar-menu is-paddingless has-background-dark" id="navbarMenu">
-      <div class="navbar-end main-nav-items">
-        <a data-scroll href="#top" class="navbar-item has-text-weight-bold is-active">Início</a>
-        <a data-scroll href="#services" class="navbar-item has-text-weight-bold has-text-light">Serviços</a>
-        <a data-scroll href="#about" class="navbar-item has-text-weight-bold has-text-light">Sobre nós</a>
-        <a data-scroll href="#contact" class="navbar-item has-text-weight-bold has-text-light">Contactos</a>
+      <div class="navbar-end main-nav-items" id="navbar-items">
+        <a data-scroll href="#top" class="navbar-item has-text-weight-bold is-active" id="link-top">Início</a>
+        <a data-scroll href="#services" class="navbar-item has-text-weight-bold has-text-light" id="link-services">Serviços</a>
+        <a data-scroll href="#about" class="navbar-item has-text-weight-bold has-text-light" id="link-about">Sobre nós</a>
+        <a data-scroll href="#contact" class="navbar-item has-text-weight-bold has-text-light" id="link-contact">Contactos</a>
       </div>
     </div>
   </nav>
   <!--End navbar-->
 
   <!--Index section-->
-  <section class="section home-section has-background-dark">
+  <section class="section home-section has-background-dark" id="top">
     <div class="container is-fluid">
       <div class="columns is-centered is-vcentered is-5-desktop">
         <div class="column">
@@ -62,8 +63,8 @@
               Vamos trabalhar juntos!
           </h3>
           <div class="is-grouped">
-            <a href="#" class="button is-primary has-text-weight-bold">Iniciar projeto</a>
-            <a href="#" class="button is-dark is-inverted is-outlined has-text-weight-bold" style="margin-left: 1rem">Serviços</a>
+            <a href="#contact" class="button is-primary has-text-weight-bold">Iniciar projeto</a>
+            <a href="#services" class="button is-dark is-inverted is-outlined has-text-weight-bold" style="margin-left: 1rem">Serviços</a>
           </div>
         </div>
         <div class="column is-hidden-touch">
@@ -264,7 +265,7 @@
         <div class="section">
           <div class="container is-fluid">
             <h1 class="title has-text-light">Estamos ansiosos por falar consigo.</h1>
-            <h2 class="subtitle has-text-light">Vamos construir algo fantástico?<br> Teremos todo o gosto em ajudar.</h2>
+            <h2 class="subtitle has-text-light">Teremos todo o gosto em ajudar.</h2>
             <!--Contact form-->
             <div class="field">
               <label class="label has-text-light">Nome</label>
@@ -355,6 +356,8 @@
   </section>
   <!--End contact section-->
 
+  <script src="https://unpkg.com/in-view@0.6.1/dist/in-view.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/gumshoe@4.0/dist/gumshoe.polyfills.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
   <script src="../src/js/main.js"></script>
   <!--<script src="js/main.js"></script>-->

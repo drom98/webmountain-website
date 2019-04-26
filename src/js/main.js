@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const scroll = new SmoothScroll('a[href*="#"]', {
     speed: 620
   });
+  var spy = new Gumshoe('#navbar-items a')
 
   const burgerBtn = document.querySelector('.burger');
   const navbarDataset = document.querySelector('#'+ burgerBtn.dataset.target);
