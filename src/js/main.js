@@ -24,4 +24,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  //Form validations
+  const formMessage = document.querySelector('.form-message');
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('phone');
+  const phoneInpute = document.getElementById('phone');
+  function validations() {
+    if(nameInput.value == '') {
+      nameInput.classList.add('is-danger');
+      formMessage.classList.remove('form-message');
+    } else {
+      nameInput.classList.remove('is-danger');
+      formMessage.classList.add('form-message');
+    }
+  }
+  nameInput.addEventListener('blur', validations);
 });
