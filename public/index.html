@@ -40,7 +40,7 @@
     </div>
     <div class="navbar-menu is-paddingless has-background-dark" id="navbarMenu">
       <div class="navbar-end main-nav-items" id="navbar-items">
-        <a data-scroll href="#top" class="navbar-item has-text-weight-bold is-active" id="link-top">Início</a>
+        <a data-scroll href="#top" class="navbar-item has-text-weight-bold has-text-light" id="link-top">Início</a>
         <a data-scroll href="#services" class="navbar-item has-text-weight-bold has-text-light" id="link-services">Serviços</a>
         <a data-scroll href="#about" class="navbar-item has-text-weight-bold has-text-light" id="link-about">Sobre nós</a>
         <a data-scroll href="#contact" class="navbar-item has-text-weight-bold has-text-light" id="link-contact">Contactos</a>
@@ -82,7 +82,7 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">Serviços</h1>
-          <h2 class="subtitle">Desenvolvemos experiências únicas, para clientes, que, como nós, prezam pela qualidade.</h2>
+          <h2 class="subtitle">Desenvolvemos serviços web que ajudam a sua empresa a crescer.</h2>
         </div>
       </div>
     </div>
@@ -201,7 +201,7 @@
           <div class="hero-body">
             <div class="container">
               <h1 class="title">Tem um projeto para nós?</h1>
-              <h2 class="subtitle">Fale connosco.</h2>
+              <h2 class="subtitle">Vamos conversar!</h2>
               <a href="#contact" class="button">Contactos</a>
             </div>
           </div>
@@ -266,42 +266,44 @@
             <h1 class="title has-text-light">Estamos ansiosos por falar consigo.</h1>
             <h2 class="subtitle has-text-light">Teremos todo o gosto em ajudar.</h2>
             <!--Contact form-->
-            <div class="field">
-              <label class="label has-text-light">Nome</label>
-              <div class="control">
-                <input id="name" class="input has-background-dark has-text-light is-light" type="text">
+            <form id="contact-form" method="POST" name="contact" data-netlify="true">
+              <div class="field">
+                <label class="label has-text-light">Nome</label>
+                <div class="control">
+                  <input id="name" name="name" class="input has-background-dark has-text-light is-light" type="text">
+                </div>
+                <p class="help is-danger form-message">Introduza um nome válido.</p>
               </div>
-              <p class="help is-danger form-message">Introduza um nome válido.</p>
-            </div>
-            <div class="field">
-              <label class="label has-text-light">Email</label>
-              <div class="control">
-                <input id="email" class="input has-background-dark has-text-light is-light" type="email">
+              <div class="field">
+                <label class="label has-text-light">Email</label>
+                <div class="control">
+                  <input id="email" name="email" class="input has-background-dark has-text-light is-light" type="email">
+                </div>
               </div>
-            </div>
-            <div class="field">
-              <label class="label has-text-light">Telefone</label>
-              <div class="control">
-                <input id="phone" class="input has-background-dark has-text-light is-light" type="tel">
+              <div class="field">
+                <label class="label has-text-light">Telefone</label>
+                <div class="control">
+                  <input id="phone" name="phone" class="input has-background-dark has-text-light is-light" type="tel">
+                </div>
               </div>
-            </div>
-            <div class="field">
-              <label class="label has-text-light">Mensagem</label>
-              <div class="control">
-                <textarea class="textarea has-background-dark has-text-light is-light"></textarea>
+              <div class="field">
+                <label class="label has-text-light">Mensagem</label>
+                <div class="control">
+                  <textarea name="message" class="textarea has-background-dark has-text-light is-light"></textarea>
+                </div>
               </div>
-            </div>
-            <div class="field has-text-light disable-hover-effect">
-              <div class="control">
-                <label class="checkbox">
-                  <input type="checkbox" id="terms">
-                  Declaro que li e aceito o tratamento dos meus dados pessoais conforme descrito nos <a href="#">termos e condições.</a>
-                </label>
+              <div class="field has-text-light disable-hover-effect">
+                <div class="control">
+                  <label class="checkbox">
+                    <input type="checkbox" id="terms">
+                    Declaro que li e aceito o tratamento dos meus dados pessoais conforme descrito nos <a href="#">termos e condições.</a>
+                  </label>
+                </div>
               </div>
-            </div>
+            </form>
             <div class="field">
               <div class="control">
-                <button class="button" disabled>Enviar</button>
+                <button type="submit" class="button" >Enviar</button>
               </div>
             </div>
           </div>

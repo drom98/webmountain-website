@@ -26,18 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   //Form validations
+  const form = document.querySelector('#contact-form');
   const formMessage = document.querySelector('.form-message');
   const nameInput = document.getElementById('name');
-  const emailInput = document.getElementById('phone');
-  const phoneInpute = document.getElementById('phone');
-  function validations() {
+  const emailInput = document.getElementById('email');
+  const phoneInput = document.getElementById('phone');
+  
+  const validate = () => {
     if(nameInput.value == '') {
-      nameInput.classList.add('is-danger');
-      formMessage.classList.remove('form-message');
-    } else {
-      nameInput.classList.remove('is-danger');
-      formMessage.classList.add('form-message');
+      console.log(nameInput.value);
     }
   }
-  nameInput.addEventListener('blur', validations);
+
+  form.addEventListener('blur', validate);
 });
