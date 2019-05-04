@@ -26,17 +26,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   //Form validations
-  const form = document.querySelector('#contact-form');
-  const formMessage = document.querySelector('.form-message');
-  const nameInput = document.getElementById('name');
-  const emailInput = document.getElementById('email');
-  const phoneInput = document.getElementById('phone');
-  
-  const validate = () => {
-    if(nameInput.value == '') {
-      console.log(nameInput.value);
+  function validate() {
+    const inputs = document.querySelectorAll('form input, form textarea');
+
+    inputs.forEach(input => {
+      input.addEventListener('blur', () => {
+        console.log(input);
+      });
+    });
+  };
+
+  function validateName(name) {
+    if(name.value.lenght < 3) {
+      console.log("Nome inválido");
     }
   }
 
-  form.addEventListener('blur', validate);
+  function displayError(input) {
+
+  }
+
+  validate();
 });
