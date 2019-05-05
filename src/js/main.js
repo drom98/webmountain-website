@@ -28,22 +28,60 @@ document.addEventListener('DOMContentLoaded', () => {
   //Form validations
   function validate() {
     const inputs = document.querySelectorAll('form input, form textarea');
+    const errorMessage = document.querySelectorAll('form p');
 
-    inputs.forEach(input => {
+    inputs.forEach((input, index) => {
       input.addEventListener('blur', () => {
-        console.log(input);
+        if(input.getAttribute('name') == 'name') {
+          validateName(input, errorMessage[index]);
+        };
+        if(input.getAttribute('name') == 'email') {
+          validateEmail(input, errorMessage[index]);
+        };
+        if(input.getAttribute('name') == 'phone') {
+          validatePhone(input, errorMessage[index]);
+        };
       });
     });
   };
 
-  function validateName(name) {
-    if(name.value.lenght < 3) {
-      console.log("Nome inválido");
+  function validateName(name, message) {
+    if(name.value.length < 3) {
+      displayError(name, "is-danger", message, "block");
+    } else {
+      displayError(name, "is-light", message, "none");
     }
   }
 
-  function displayError(input) {
+  function validateEmail(email, message) {
+    const patternValidation = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    if(email.value.length > 0) {
+      if(!patternValidation.test(email.value)) {
+        console.log("inválido");
+        displayError(email, "is-danger", message, "inline-block");
+      } else {
+        console.log("válido");
+        displayError(email, "is-light", message, "none");
+      }
+    } else {
+      console.log("inválido");
+      displayError(email, "is-danger", message, "inline-block");
+    }
+  }
 
+  function validatePhone(phone, message) {
+    console.log(message);
+    if(phone.value.length < 9) {
+      displayError(phone, "is-danger", message, "block");
+    } else {
+      displayError(phone, "is-light", message, "none");
+    }
+  }
+
+  function displayError(input, errorClass, message, state) {
+    input.classList.remove('is-danger');
+    input.classList.add(`${errorClass}`);
+    message.style.display = `${state}`;
   }
 
   validate();
