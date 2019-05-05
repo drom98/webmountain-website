@@ -41,6 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if(input.getAttribute('name') == 'phone') {
           validatePhone(input, errorMessage[index]);
         };
+        if(input.getAttribute('type') == 'checkbox') {
+          validateCheckbox(input);
+        }
       });
     });
   };
@@ -70,11 +73,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function validatePhone(phone, message) {
-    console.log(message);
-    if(phone.value.length < 9) {
+    const phonePattern = /^\d{9}$/;
+    if(!phonePattern.test(phone.value)) {
       displayError(phone, "is-danger", message, "block");
     } else {
       displayError(phone, "is-light", message, "none");
+    }
+  }
+
+  function validateCheckbox(checkbox) {
+    if(checkbox.checked == false) {
+      console.log('desmarcado');
+    } else {
+      console.log('checked');
     }
   }
 
