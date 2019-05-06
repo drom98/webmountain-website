@@ -8,6 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const navbarDataset = document.querySelector('#'+ burgerBtn.dataset.target);
   const navbar = document.querySelector('#navbarMenu');
 
+  function getNavItems() {
+    const navbarItems = document.querySelectorAll('.navbar-item');
+
+    navbarItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        burgerBtn.classList.toggle('is-active');
+        navbarDataset.classList.toggle('is-active');
+      })
+    });
+  }
+
+  getNavItems();
+
   burgerBtn.addEventListener('click', () => {
     burgerBtn.classList.toggle('is-active');
     navbarDataset.classList.toggle('is-active');
