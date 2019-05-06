@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function validate() {
     const inputs = document.querySelectorAll('form input, form textarea');
     const errorMessage = document.querySelectorAll('form p');
+    const submitBtn = document.querySelector('button[type=submit]');
+    submitBtn.disabled = true;
 
     inputs.forEach((input, index) => {
       input.addEventListener('blur', () => {
@@ -42,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
           validatePhone(input, errorMessage[index]);
         };
         if(input.getAttribute('type') == 'checkbox') {
-          validateCheckbox(input);
+          validateCheckbox(input, submitBtn);
         }
       });
     });
@@ -81,18 +83,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function validateCheckbox(checkbox) {
-    if(checkbox.checked == false) {
-      console.log('desmarcado');
-    } else {
-      console.log('checked');
-    }
+  function validateCheckbox(checkbox, submitBtn) {
+    checkbox.addEventListener('click', () => {
+      if(checkbox.checked == false) {
+        console.log('desmarcado');
+        btnState(submitBtn, true);
+      } else {
+        console.log('checked');
+        btnState(submitBtn, false);
+      }
+    })
   }
 
   function displayError(input, errorClass, message, state) {
     input.classList.remove('is-danger');
     input.classList.add(`${errorClass}`);
     message.style.display = `${state}`;
+  }
+
+  function btnState(btn, state) {
+    btn.disabled = state;
   }
 
   validate();
