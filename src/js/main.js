@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     inputs.forEach((input, index) => {
       input.addEventListener('blur', () => {
+        console.log(input);
         if(input.getAttribute('name') == 'name') {
           validateName(input, errorMessage[index]);
         };
