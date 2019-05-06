@@ -37,13 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(input);
         console.log(index);
         if(input.getAttribute('name') == 'name') {
-          validateName(input, errorMessage[index]);
+          validateName(input, errorMessage[index-1]);
         };
         if(input.getAttribute('name') == 'email') {
-          validateEmail(input, errorMessage[index]);
+          validateEmail(input, errorMessage[index-1]);
         };
         if(input.getAttribute('name') == 'phone') {
-          validatePhone(input, errorMessage[index]);
+          validatePhone(input, errorMessage[index-1]);
         };
         if(input.getAttribute('type') == 'checkbox') {
           validateCheckbox(input, submitBtn);
