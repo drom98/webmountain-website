@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt" class="">
 
 <head>
   <meta charset="UTF-8">
@@ -54,8 +54,8 @@
     <div class="container is-fluid">
       <div class="columns is-centered is-vcentered is-5-desktop">
         <div class="column">
-          <h1 class="subtitle is-6">Websites | e-Commerce | Marketing digital</h1>
-          <h2 class="title is-1 is-spaced has-text-light">O <span class="has-text-primary">futuro</span> do seu negócio.
+          <h1 class="subtitle is-6" data-lax-preset="fadeInOut">Websites | e-Commerce | Marketing digital</h1>
+          <h2 class="title is-1 is-spaced has-text-light lax" data-lax-translate-y="0 0, 300 10">O <span class="has-text-primary">futuro</span> do seu negócio.
           </h2>
           <h3 class="subtitle is-6 has-text-light">
               Alcance mais clientes, crie uma ligação com os mesmos, aumente as vendas, imponha o reconhecimento da sua marca. Desenvolvemos serviços adaptados às necessidades de cada projeto
@@ -266,7 +266,7 @@
             <h1 class="title has-text-light">Estamos ansiosos por falar consigo.</h1>
             <h2 class="subtitle has-text-light">Teremos todo o gosto em ajudar.</h2>
             <!--Contact form-->
-            <form id="contact-form" method="POST" name="contact" data-netlify="true">
+            <form id="contact-form" action="POST" name="contact" data-netlify="true">
               <div class="field">
                 <label class="label has-text-light">Nome</label>
                 <div class="control">
@@ -298,7 +298,7 @@
                 <div class="control">
                   <label class="checkbox">
                     <input type="checkbox" id="terms">
-                    Declaro que li e aceito o tratamento dos meus dados pessoais conforme descrito nos <a href="#">termos e condições.</a>
+                    Declaro que li e aceito o tratamento dos meus dados pessoais conforme descrito na nossa <a id="terms-link">Política de Privacidade.</a>
                   </label>
                 </div>
               </div>
@@ -376,9 +376,120 @@
   </section>
   <!--End contact section-->
 
+  <!--Terms modal-->
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Política de Privacidade</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p class="subtitle is-6">
+        Esta Política de Privacidade aplica-se a todos os dados pessoais recolhidos, através do domínio webmountain.pt
+        </p>
+        <p class="subtitle is-spaced"></p>
+        <p class="title is-5">
+        Do que trata esta política?
+        </p>
+        <p class="subtitle is-6">
+        Esta Política de Privacidade explica como recolhemos e tratamos os dados pessoais que são necessários para o fornecimento de serviços que estão disponíveis através da webmountain.
+        </p>
+        <p class="subtitle is-spaced"></p>
+        <p class="title is-5 is-marginless">
+        Finalidade do Tratamento de Dados
+        </p>
+        <p class="subtitle is-6 is-marginless">
+        Os seus dados pessoais serão usados para a finalidade de gestão dos pedidos ou perguntas que nos tenha feito através dos nossos formulários de contactos, bem como para o envio de emails informativos e promocionais que tenha subscrito no nosso website.
+        </p>
+        <p class="subtitle is-spaced"></p>
+        <p class="title is-5 is-marginless">
+        Durante quanto tempo conservaremos os seus dados?
+        </p>
+        <p class="subtitle is-6 is-marginless">
+        A webmountain tomará as medidas razoáveis para assegurar que os dados pessoais serão apenas tratados durante o tempo necessário para satisfazer as finalidades previstas na presente política de privacidade.
+        </p>
+        <p class="subtitle is-spaced"></p>
+        <p class="title is-5 is-marginless">
+        Legitimidade do Tratamento
+        </p>
+        <p class="subtitle is-6 is-marginless">
+        O fundamento que justifica o tratamento dos seus dados pessoais para as finalidades acima indicadas é o seu consentimento.
+        </p>
+        <p class="subtitle is-spaced"></p>
+        <p class="title is-5 is-marginless">
+        Transmissão de Dados
+        </p>
+        <p class="subtitle is-6 is-marginless">
+        Os seus dados pessoais não serão comunicados a empresas terceiras.
+        </p>
+        <p class="subtitle is-spaced"></p>
+        <p class="title is-5 is-marginless">
+        Direito de cancelar o seu consentimento
+        </p>
+        <p class="subtitle is-6 is-marginless">
+        A qualquer momento pode cancelar o seu consentimento ao tratamento de dados pessoais para qualquer uma das finalidades acima indicadas.
+        </p>
+        <p class="subtitle is-spaced"></p>
+        <p class="title is-5 is-marginless">
+        Utilização de cookies
+        </p>
+        <p class="subtitle is-6 is-marginless">
+        O website da webmountain utiliza cookies para variados fins.
+        </p>
+        <p class="subtitle is-spaced"></p>
+        <p class="title is-5 is-marginless">
+        O que são cookies?
+        </p>
+        <p class="subtitle is-6 is-marginless">
+        São pequenos ficheiros de dados que são enviados ao computador, telemóvel ou outro dispositivo de acesso do utilizador quando este visita uma página web, e que permitem obter informação relativa à sua navegação ou um código que permite inequivocamente identificar o utilizador.
+        </p>
+        <p class="subtitle is-spaced"></p>
+        <p class="title is-5 is-marginless">
+        Tipos de cookies e finalidades de uso.
+        </p>
+        <p class="subtitle is-6 is-marginless">
+        Usamos cookies por vários motivos detalhados abaixo. Infelizmente, na maioria dos casos, não há opções padrão para desabilitar os cookies sem desabilitar completamente a funcionalidade e os recursos que eles adicionam a este website. É recomendável que deixe todos os cookies activos se não tiver a certeza se precisa deles ou não, caso eles sejam usados ​​para fornecer um serviço que usa.
+        </p>
+        <p class="subtitle is-spaced"></p>
+        <p class="title is-5 is-marginless">
+        Cookies próprios
+        </p>
+        <p class="subtitle is-6 is-marginless">
+        São os criados ou geridos pelo responsável da página web. A página web www.webmountain.pt utiliza cookies próprios com o fim de personalizar a navegação para as sucessivas visitas do utilizador.
+        Este site oferece serviços de subscrição de newsletter e os cookies podem ser usados para verificar se já se encontra registado e se deseja exibir determinadas notificações que podem ser válidas apenas para utilizadores com subscrição ou não.
+        Quando envia dados através dos vários formulários disponíveis neste website, os cookies podem ser configurados para lembrar os detalhes do utilizador.
+        </p>
+        <p class="subtitle is-spaced"></p>
+        <p class="title is-5 is-marginless">
+        Cookies de terceiros
+        </p>
+        <p class="subtitle is-6 is-marginless">
+        São os administrados por prestadores de serviços de análise e redes sociais alheios à webmountain.
+        </p>
+        <p class="subtitle is-spaced"></p>
+        <p class="title is-5 is-marginless">
+        E se não autorizar os Cookies?
+        </p>
+        <p class="subtitle is-6 is-marginless">
+        Pode impedir o uso de cookies ajustando as configurações do seu navegador (consulte a ajuda do seu navegador para saber como o pode fazer). Esteja ciente de que a desactivação de cookies afectará a funcionalidade deste e de muitos outros websites que visita. Desactivar os cookies resultará na desactivação de certas funcionalidades e recursos do website. Portanto é recomendável que não desactive os cookies.        
+        </p>
+        <p class="subtitle is-spaced"></p>
+        <p class="title is-5 is-marginless">
+        Actualizações à Política de Privacidade
+        </p>
+        <p class="subtitle is-6 is-marginless">
+        Reservamo-nos o direito de actualizar esta Política de Privacidade. Solicitamos que reveja periodicamente este documento para que esteja a par de qualquer alteração.        
+        </p>
+        <p class="help">Última actualização: Maio 2019​</p>
+      </section>
+    </div>
+  </div>
+
   <script src="https://unpkg.com/in-view@0.6.1/dist/in-view.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/cferdinandi/gumshoe@4.0/dist/gumshoe.polyfills.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
   <script src="../src/js/main.js"></script>
   <!--<script src="js/main.js"></script>-->
 </body>

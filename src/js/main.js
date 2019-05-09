@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  window.onload = function() {
+    lax.setup() // init
+  
+    const updateLax = () => {
+      lax.update(window.scrollY)
+      window.requestAnimationFrame(updateLax)
+    }
+  
+    window.requestAnimationFrame(updateLax)
+  }
+
   const scroll = new SmoothScroll('a[href*="#"]', {
     speed: 620
   });
@@ -47,8 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     inputs.forEach((input, index) => {
       input.addEventListener('blur', () => {
-        console.log(input);
-        console.log(index);
         if(input.getAttribute('name') == 'name') {
           validateName(input, errorMessage[index-1]);
         };
@@ -101,10 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function validateCheckbox(checkbox, submitBtn) {
     checkbox.addEventListener('click', () => {
       if(checkbox.checked == false) {
-        console.log('desmarcado');
         btnState(submitBtn, true);
       } else {
-        console.log('checked');
         btnState(submitBtn, false);
       }
     })
@@ -121,4 +129,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   validate();
+
+  //Display terms
+  function getTerms() {
+    const termsLink =  document.querySelector('#terms-link');
+    const htmlTag = document.querySelector('html');
+    const modalDiv = document.querySelector('.modal');
+    termsLink.addEventListener('click', () => {
+      htmlTag.classList.toggle('is-clipped');
+      modalDiv.classList.toggle('is-active');
+    });
+    //Close modal
+    const closeBtn = document.querySelector('.delete');
+    closeBtn.addEventListener('click', () => {
+      htmlTag.classList.toggle('is-clipped');
+      modalDiv.classList.toggle('is-active');
+    });
+  }
+
+  getTerms();
 });
