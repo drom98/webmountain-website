@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const errorMessage = document.querySelectorAll('form p');
     const submitBtn = document.querySelector('button[type=submit]');
     submitBtn.disabled = true;
+    validateCheckbox(submitBtn);
 
     inputs.forEach((input, index) => {
       input.addEventListener('blur', () => {
@@ -68,9 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if(input.getAttribute('name') == 'phone') {
           validatePhone(input, errorMessage[index-1]);
         };
-        if(input.getAttribute('type') == 'checkbox') {
-          validateCheckbox(input, submitBtn);
-        }
       });
     });
   };
@@ -108,14 +106,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function validateCheckbox(checkbox, submitBtn) {
+  function validateCheckbox(submitBtn) {
+    const checkbox = document.querySelector('input[type=checkbox]');
     checkbox.addEventListener('click', () => {
       if(checkbox.checked == false) {
         btnState(submitBtn, true);
       } else {
         btnState(submitBtn, false);
       }
-    })
+    }) 
   }
 
   function displayError(input, errorClass, message, state) {
