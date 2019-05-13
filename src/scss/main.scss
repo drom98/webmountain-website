@@ -1,5 +1,10 @@
 $section-padding-medium: 24vh 1.5rem;
 
+@font-face {
+  font-family: 'Mosk Bold 700';
+  src: url('../assets/fonts/MoskBold700.ttf');
+}
+
 //Import colors
 @import '_colors';
 
